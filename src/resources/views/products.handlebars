@@ -1,0 +1,16 @@
+
+
+<div class="productList">
+    {{#each products}}
+    <div class="card" style="width: 18rem;">
+    <a href="/products/{{this.slug}}">
+      <img class="card-img-top img" src={{this.Avt}} alt="Hình ảnh" height="300px" width="auto">
+  </a>
+  <div class="card-body">
+    <h5 class="card-title">{{this.Name}}</h5>
+    <p class="card-text"> {{this.Description}}</p>
+    <a href="#" class="btn btn-primary">Liên hệ</a>
+  </div>
+</div>
+    {{/each}}
+</div>
