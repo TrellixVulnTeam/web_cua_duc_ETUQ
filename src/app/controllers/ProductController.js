@@ -14,6 +14,7 @@ class ProductController{
        .catch(error); 
     }
 
+    
     index(req,res){
         Product.find({})
         .then(products=>
@@ -31,7 +32,27 @@ class ProductController{
         request.avt=`https://i.ytimg.com/vi_webp/${request.youtubeID}/sddefault.webp`
         
         const newProduct=new Product(request);
-        newProduct.save(error=>{});
+        newProduct.save()
+            .then(() => res.redirect('/products'));
+       
+    }
+
+    edit(req,res,error){
+        Product.findById(req.params.id)
+            .then(product =>
+            
+            res.render('products/edit',{product:mongoToObject(product)})
+            
+        )
+        .catch(error);
+    }
+
+    // [PUT]/products/:id
+    update(req, res, error) {
+        req.body.avt = `https://i.ytimg.com/vi_webp/${req.body.youtubeID}/sddefault.webp`
+        Product.updateOne({_id:req.params.id},req.body)
+        .then(()=>res.redirect('/products'))
+        .catch();
     }
 }
 

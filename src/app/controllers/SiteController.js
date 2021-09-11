@@ -3,7 +3,11 @@ const {multiMongosToObjects}=require('../../util/mongoose');
 
 class SiteController{
     index(req,res,next){
-        res.render('home');    
+        Product.find({})
+        .then(products=>
+            res.render('home',{products:multiMongosToObjects(products)})
+        )
+        
     }
 
     info(req,res){

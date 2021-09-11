@@ -9,7 +9,6 @@ function route(app){
     app.use('/products',productRouter);
     app.use('/',siteRouter);
    
-    
 }
 
 module.exports=route;

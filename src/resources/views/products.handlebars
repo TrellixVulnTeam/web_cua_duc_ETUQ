@@ -1,16 +1,35 @@
-
-
-<div class="productList">
-    {{#each products}}
-    <div class="card" style="width: 18rem;">
-    <a href="/products/{{this.slug}}">
-      <img class="card-img-top img" src={{this.avt}} alt="Hình ảnh" height="300px" width="auto">
-  </a>
-  <div class="card-body">
-    <h5 class="card-title">{{this.name}}</h5>
-    <p class="card-text"> {{this.description}}</p>
-    <a href="#" class="btn btn-primary">Liên hệ</a>
-  </div>
-</div>
-    {{/each}}
+<div class="m-4">
+    <h1>DANH SÁCH SẢN PHẨM</h1>
+    
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Tên sản phẩm</th>
+                <th scope="col">Thể loại</th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each products}}
+            <tr>
+                <th scope="row">{{sum @index 1}}</th>
+                <td>
+                    <a href="/products/{{this.slug}}">
+                        {{this.name}}
+                    </a>
+                   
+                </td>
+                <td>{{this.style}}</td>
+                <td>
+                    <a href="/products/{{this._id}}/edit">Sửa</a>
+                </td>
+                <td>
+                    <a href="/products/:id/delete">Xóa</a>
+                </td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
 </div>

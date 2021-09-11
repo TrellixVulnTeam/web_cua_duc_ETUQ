@@ -1,0 +1,23 @@
+<div class="mt-4">
+    <h1>CẬP NHẬT SẢN PHẨM</h1>
+    <form method="POST" action="/products/{{product._id}}?_method=PUT">
+        <div class="form-group">
+            <label for="exampleInputEmail1">Tên sản phẩm</label>
+            <input type="text" class="form-control" name="name" value="{{product.name}}" placeholder="Hồng Na xinh đẹp">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">TMô tả</label>
+            <textarea class="form-control" name="description" placeholder="Hồng Na rất là xinh đẹp!!">{{product.description}}</textarea>
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Style</label>
+            <input type="text" class="form-control" name="style" value="{{product.style}}" placeholder="Ballad">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Youtube ID</label>
+            <input type="text" class="form-control" name="youtubeID" value="{{product.youtubeID}}" placeholder="abcd_xyz_123">
+        </div>
+    
+        <button type="submit" class="btn btn-primary">Cập nhật sản phẩm</button>
+    </form>
+</div>

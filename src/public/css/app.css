@@ -1,5 +1,6 @@
 .productList {
   display: flex;
+  flex-wrap: wrap;
   margin: 10px; }
 
 .img {
@@ -10,6 +11,3 @@
   font-weight: bold;
   color: black;
   background-color: pink; }
-
-.btn {
-  display: none; }
