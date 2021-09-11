@@ -1,10 +1,13 @@
 <div class="mt-4">
     <div class="row">
         <div class="col-lg-3">
-            <button>MUA NGAY</button>
+            <button  >MUA NGAY</button>
         </div>
         <div class="col-lg-9">
-            <h2>{{product.Name}}</h2>
+            <iframe width="724" height="407" src="https://www.youtube.com/embed/{{product.youtubeID}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <h2>{{product.name}}</h2>
+            <p>{{product.description}}</p>
+            <p>STYLE: {{product.style}}</p>
         </div>
     </div>
 </div>

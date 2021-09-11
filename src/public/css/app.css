@@ -4,3 +4,12 @@
 
 .img {
   object-fit: cover; }
+
+.product-add-btn {
+  margin: 0 0 0 10px;
+  font-weight: bold;
+  color: black;
+  background-color: pink; }
+
+.btn {
+  display: none; }

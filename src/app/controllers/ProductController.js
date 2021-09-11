@@ -21,6 +21,18 @@ class ProductController{
         )
         
     }
+
+    create(req,res){
+        res.render('products/create');
+    }
+
+    store(req,res){
+        const request=req.body;
+        request.avt=`https://i.ytimg.com/vi_webp/${request.youtubeID}/sddefault.webp`
+        
+        const newProduct=new Product(request);
+        newProduct.save(error=>{});
+    }
 }
 
 module.exports=new ProductController;
